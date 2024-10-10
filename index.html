@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,8 +83,8 @@
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:locale">
+<meta property="article:author" content="Yuu">
 <meta name="twitter:card" content="summary">
 
 
@@ -101,7 +101,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -133,7 +133,7 @@
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -192,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            关于
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -222,7 +222,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -245,6 +245,147 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/08/%E9%9A%90%E7%A7%81%E5%90%88%E8%A7%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/10/08/%E9%9A%90%E7%A7%81%E5%90%88%E8%A7%84/" itemprop="url">Android应用隐私合规修改细则</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-10-08T21:02:49+08:00">
+                2024-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          原来app只上架play，现在要求上架国内应用商店，需要对隐私合规等方面进行审查修改根据上架小米应用商店的评测报告，在GitHub上找了两个工具评测，根据评测结果来进行项目修改
+使用工具
+camille
+AppScan
+
+结果对比camille 732项减为0AppScan 网络行为从92次请求减为0AppScan 关注列表从2422次减为0  
+
+    数据对比
+camille中hook到的数据为732项  
+AppScan中检测到的网络请求为92次，获取信息为2422次
+
+
+
+
+修改过程1. 去除不必要权限对比代码中使用的权限，发现存在报告中存在一些没有使用过的权限，对于这些由引用的sdk申请的权限，我们可以直接移除，在清单文件中使用node&#x3D;”remove”去除。  
+123456789101112131415&lt;manifest    &lt;uses-permis
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2024/10/08/%E9%9A%90%E7%A7%81%E5%90%88%E8%A7%84/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -288,9 +429,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-10-08T20:47:41+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-10-08T20:47:41+08:00">
                 2024-10-08
               </time>
             
@@ -345,7 +486,7 @@ Deploy to remote
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2024/10/08/hello-world/#more" rel="contents">
-              Read more &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -428,8 +569,8 @@ Deploy to remote
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -473,13 +614,13 @@ Deploy to remote
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Yuu</span>
 
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -487,7 +628,7 @@ Deploy to remote
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
